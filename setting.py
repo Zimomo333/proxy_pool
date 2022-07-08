@@ -54,14 +54,15 @@ PROXY_FETCHER = [
     "freeProxy07",
     "freeProxy08",
     "freeProxy09",
-    "freeProxy10"
+    "freeProxy10",
+    "freeProxy14"
 ]
 
 # ############# proxy validator #################
 # 代理验证目标网站
 HTTP_URL = "http://httpbin.org"
 
-HTTPS_URL = "https://www.qq.com"
+HTTPS_URL = "https://tarkov-market.com/"
 
 # 代理验证时超时时间
 VERIFY_TIMEOUT = 10

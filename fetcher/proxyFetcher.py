@@ -153,6 +153,14 @@ class ProxyFetcher(object):
         for proxy in proxies:
             yield ':'.join(proxy)
 
+    @staticmethod
+    def freeProxy14():
+        url = "https://proxypool.scrape.center/all"
+        resp = WebRequest().get(url, timeout=10)
+        proxies = re.findall(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d{1,5})', resp.text)
+        for proxy in proxies:
+            yield proxy
+
     # @staticmethod
     # def wallProxy01():
     #     """
