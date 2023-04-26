@@ -3,6 +3,10 @@ services:
   proxy_pool:
     build: .
     container_name: proxy_pool
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "64m"
     environment:
       DB_CONN: "redis://@proxy_redis:6379/0"
   proxy_redis:
